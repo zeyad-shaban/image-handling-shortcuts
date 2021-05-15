@@ -7,6 +7,9 @@
         "default_popup": "./popup.html"
     },
     "author": "Zeyad Shaban",
+    "permissions": [
+        "activeTab"
+      ],
     "content_scripts": [
         {
             "matches": [
