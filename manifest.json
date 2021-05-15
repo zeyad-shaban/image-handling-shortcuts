@@ -16,5 +16,9 @@
                 "./index.js"
             ]
         }
-    ]
+    ],
+    "default_icon": {
+        "32": "./icon_32.png",
+        "128": "./icon_128.png"
+    }
 }
