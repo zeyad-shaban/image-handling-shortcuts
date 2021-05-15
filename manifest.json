@@ -1,6 +1,6 @@
 {
     "name": "Image Handling Shortcuts",
-    "description": "*INSTRUCTIONS IN BETTER FORMAT CAN BE FOUND FROM THE EXTENSION POPUP WINDOW AFTER INSTALLING IT*                  Got tired of clicking to save the image? clicking to copy image address? clicking to do other stuff with images? Got tired of wasting time on that boring things!\nThis extension will provide your browser with useful shortcuts to be able to deal with images.\n\nHow to use it? simply put your cursor directly on the image, then press one of the shortcuts listed below.\n#Shortcuts\n- Save Image as: CTRL + SHIFT + S\n- Copy Image Address: CTRL + SHIFT + C\n\nIf you have any ideas to improve our product please open an issue on the Github page: https://github.com/zeyad-shaban/image-handling-shortcuts/issues \n - Paypal Donations: https://www.paypal.com/paypalme/codewithzeyad?locale.x=en_US \n - Youtube Channel: https://www.youtube.com/channel/UCFjcc0rq2guK6kJ4va49zgA \n - Twitter: https://twitter.com/zeyadshaban0",
+    "description": "Clicking to save the image? Clicking to waste time! This extension will provide you with shortcuts to deal with images.",
     "version": "1.0",
     "manifest_version": 3,
     "action": {
