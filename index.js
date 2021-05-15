@@ -9,15 +9,43 @@ document.onmousemove = e => {
 const getNearestImage = () => document.elementFromPoint(cursorX, cursorY);
 
 
+// force downloading
+function forceDownload(blob, filename) {
+    var a = document.createElement('a');
+    a.download = filename;
+    a.href = blob;
+    // For Firefox https://stackoverflow.com/a/32226068
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+}
+
+// Current blob size limit is around 500MB for browsers
+async function downloadResource(url, filename) {
+    if (!filename) filename = url.replace(/^.*[\\\/]/, '');
+    try {
+        const response = await fetch(url, {
+            headers: new Headers({
+                'Origin': location.origin
+            }),
+            mode: 'cors'
+        });
+        const blob = await response.blob();
+
+        const blobUrl = window.URL.createObjectURL(blob);
+        forceDownload(blobUrl, filename);
+    }
+    catch (err) {
+        alert("Forbidden Image, please download it MANUALLY");
+        console.error(e);
+    }
+}
+// END force downloading
+
 const saveImageAs = () => {
     const img = getNearestImage();
     const src = img.getAttribute('src');
-    const imgName = src.replace(/^.*[\\\/]/, '');
-
-    var a = document.createElement('a');
-    a.href = src;
-    a.download = imgName;
-    a.click();
+    downloadResource(src);
 };
 
 const copyImageAddress = () => {
