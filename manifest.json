@@ -1,0 +1,20 @@
+{
+    "name": "Image Handling Shortcuts",
+    "description": "Got tired of right clicking to save image as or copy image address? With this extension you can save alot of time as it automates the process by adding shortcuts to your browser! Instructions can be found here and in the extension's popup",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "./popup.html"
+    },
+    "author": "Zeyad Shaban",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "./index.js"
+            ]
+        }
+    ]
+}

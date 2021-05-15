@@ -1,6 +1,3 @@
-let cursorX;
-let cursorY;
-
 document.onmousemove = e => {
     cursorX = e.clientX;
     cursorY = e.clientY;
