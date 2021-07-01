@@ -68,7 +68,7 @@ const copyImageAddress = () => {
 
 window.onkeydown = e => {
     const key = e.key.toLowerCase();
-    const firstPart = e.shiftKey && e.altKey;
+    const firstPart = e.shiftKey && (e.ctrlKey || e.metaKey);
 
     if (firstPart && key === 's') saveImageAs();
     else if (firstPart && key === 'c') copyImageAddress();
